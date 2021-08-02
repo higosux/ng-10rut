@@ -1,0 +1,162 @@
+import { __decorate } from 'tslib';
+import { ɵɵdefineInjectable, Injectable, Pipe, EventEmitter, Output, Directive, forwardRef, Renderer2, ElementRef, NgModule } from '@angular/core';
+import { rutFormat, rutClean, rutValidate } from 'rut-helpers';
+export * from 'rut-helpers';
+import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+
+var Ng9RutService = /** @class */ (function () {
+    function Ng9RutService() {
+    }
+    Ng9RutService.ɵprov = ɵɵdefineInjectable({ factory: function Ng9RutService_Factory() { return new Ng9RutService(); }, token: Ng9RutService, providedIn: "root" });
+    Ng9RutService = __decorate([
+        Injectable({
+            providedIn: 'root'
+        })
+    ], Ng9RutService);
+    return Ng9RutService;
+}());
+
+var RutPipe = /** @class */ (function () {
+    function RutPipe() {
+    }
+    RutPipe.prototype.transform = function (value) {
+        return rutFormat(value);
+    };
+    RutPipe = __decorate([
+        Pipe({
+            name: 'rut',
+        })
+    ], RutPipe);
+    return RutPipe;
+}());
+
+var RutDirective = /** @class */ (function () {
+    function RutDirective() {
+        this.rutChange = new EventEmitter();
+    }
+    RutDirective.prototype.onFocus = function (ev) {
+        var htmlInputElement = ev.target;
+        htmlInputElement.value = rutClean(htmlInputElement.value);
+    };
+    RutDirective.prototype.onBlur = function (ev) {
+        var htmlInputElement = ev.target;
+        htmlInputElement.value = rutFormat(htmlInputElement.value) || '';
+    };
+    RutDirective.prototype.onChange = function (ev) {
+        var htmlInputElement = ev.target;
+        this.rutChange.emit(rutClean(htmlInputElement.value));
+    };
+    __decorate([
+        Output()
+    ], RutDirective.prototype, "rutChange", void 0);
+    RutDirective = __decorate([
+        Directive({
+            selector: '[formatRut]',
+            host: {
+                '(blur)': 'onBlur($event)',
+                '(focus)': 'onFocus($event)',
+                '(input)': 'onChange($event)',
+            },
+        })
+    ], RutDirective);
+    return RutDirective;
+}());
+
+function validateRutFactory(rutValidate) {
+    return function (c) {
+        if (!c.value) {
+            return null;
+        }
+        return rutValidate(c.value) ? null : { invalidRut: true };
+    };
+}
+var RutValidator = /** @class */ (function () {
+    function RutValidator() {
+        this.validator = validateRutFactory(rutValidate);
+    }
+    RutValidator_1 = RutValidator;
+    RutValidator.prototype.validate = function (c) {
+        return this.validator(c);
+    };
+    var RutValidator_1;
+    RutValidator = RutValidator_1 = __decorate([
+        Directive({
+            selector: '[validateRut][ngModel],[validateRut][formControl]',
+            providers: [
+                { provide: NG_VALIDATORS, useExisting: forwardRef(function () { return RutValidator_1; }), multi: true },
+            ],
+        })
+    ], RutValidator);
+    return RutValidator;
+}());
+
+var RUT_VALUE_ACCESSOR = {
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(function () { return RutValueAccessor; }),
+    multi: true,
+};
+var RutValueAccessor = /** @class */ (function () {
+    function RutValueAccessor(renderer, elementRef) {
+        this.renderer = renderer;
+        this.elementRef = elementRef;
+        this.onChange = function (_) { };
+        this.onTouched = function () { };
+    }
+    RutValueAccessor.prototype.writeValue = function (value) {
+        var normalizedValue = rutFormat(value) || '';
+        this.renderer.setProperty(this.elementRef.nativeElement, 'value', normalizedValue);
+    };
+    RutValueAccessor.prototype.registerOnChange = function (fn) { this.onChange = fn; };
+    RutValueAccessor.prototype.registerOnTouched = function (fn) { this.onTouched = fn; };
+    RutValueAccessor.ctorParameters = function () { return [
+        { type: Renderer2 },
+        { type: ElementRef }
+    ]; };
+    RutValueAccessor = __decorate([
+        Directive({
+            selector: 'input[formatRut]',
+            host: {
+                '(rutChange)': 'onChange($event)',
+                '(blur)': 'onTouched($event)',
+            },
+            providers: [RUT_VALUE_ACCESSOR],
+        })
+    ], RutValueAccessor);
+    return RutValueAccessor;
+}());
+
+var Ng9RutModule = /** @class */ (function () {
+    function Ng9RutModule() {
+    }
+    Ng9RutModule = __decorate([
+        NgModule({
+            declarations: [
+                RutPipe,
+                RutDirective,
+                RutValidator,
+                RutValueAccessor,
+            ],
+            providers: [
+                RutValidator,
+            ],
+            exports: [
+                RutPipe,
+                RutDirective,
+                RutValidator,
+                RutValueAccessor,
+            ],
+        })
+    ], Ng9RutModule);
+    return Ng9RutModule;
+}());
+
+/*
+ * Public API Surface of ng9-rut
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+export { Ng9RutModule, Ng9RutService, RutDirective, RutPipe, RutValidator, RutValueAccessor, validateRutFactory };
+//# sourceMappingURL=ng9-rut.js.map

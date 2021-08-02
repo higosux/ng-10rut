@@ -1,0 +1,29 @@
+import { __decorate } from "tslib";
+import { NgModule } from '@angular/core';
+import { RutPipe } from './rut.pipe';
+import { RutDirective } from './rut.directive';
+import { RutValidator } from './rut.validator';
+import { RutValueAccessor } from './rut-value-accessor';
+let Ng9RutModule = class Ng9RutModule {
+};
+Ng9RutModule = __decorate([
+    NgModule({
+        declarations: [
+            RutPipe,
+            RutDirective,
+            RutValidator,
+            RutValueAccessor,
+        ],
+        providers: [
+            RutValidator,
+        ],
+        exports: [
+            RutPipe,
+            RutDirective,
+            RutValidator,
+            RutValueAccessor,
+        ],
+    })
+], Ng9RutModule);
+export { Ng9RutModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmc5LXJ1dC5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZzktcnV0LyIsInNvdXJjZXMiOlsibGliL25nOS1ydXQubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxPQUFPLEVBQUUsTUFBTSxZQUFZLENBQUM7QUFDckMsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLGlCQUFpQixDQUFDO0FBQy9DLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQztBQXFCeEQsSUFBYSxZQUFZLEdBQXpCLE1BQWEsWUFBWTtDQUFJLENBQUE7QUFBaEIsWUFBWTtJQWpCeEIsUUFBUSxDQUFDO1FBQ1IsWUFBWSxFQUFFO1lBQ1osT0FBTztZQUNQLFlBQVk7WUFDWixZQUFZO1lBQ1osZ0JBQWdCO1NBQ2pCO1FBQ0QsU0FBUyxFQUFFO1lBQ1QsWUFBWTtTQUNiO1FBQ0QsT0FBTyxFQUFFO1lBQ1AsT0FBTztZQUNQLFlBQVk7WUFDWixZQUFZO1lBQ1osZ0JBQWdCO1NBQ2pCO0tBQ0YsQ0FBQztHQUNXLFlBQVksQ0FBSTtTQUFoQixZQUFZIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJ1dFBpcGUgfSBmcm9tICcuL3J1dC5waXBlJztcbmltcG9ydCB7IFJ1dERpcmVjdGl2ZSB9IGZyb20gJy4vcnV0LmRpcmVjdGl2ZSc7XG5pbXBvcnQgeyBSdXRWYWxpZGF0b3IgfSBmcm9tICcuL3J1dC52YWxpZGF0b3InO1xuaW1wb3J0IHsgUnV0VmFsdWVBY2Nlc3NvciB9IGZyb20gJy4vcnV0LXZhbHVlLWFjY2Vzc29yJztcblxuXG5cbkBOZ01vZHVsZSh7XG4gIGRlY2xhcmF0aW9uczogW1xuICAgIFJ1dFBpcGUsXG4gICAgUnV0RGlyZWN0aXZlLFxuICAgIFJ1dFZhbGlkYXRvcixcbiAgICBSdXRWYWx1ZUFjY2Vzc29yLFxuICBdLFxuICBwcm92aWRlcnM6IFtcbiAgICBSdXRWYWxpZGF0b3IsXG4gIF0sXG4gIGV4cG9ydHM6IFtcbiAgICBSdXRQaXBlLFxuICAgIFJ1dERpcmVjdGl2ZSxcbiAgICBSdXRWYWxpZGF0b3IsXG4gICAgUnV0VmFsdWVBY2Nlc3NvcixcbiAgXSxcbn0pXG5leHBvcnQgY2xhc3MgTmc5UnV0TW9kdWxlIHsgfVxuIl19

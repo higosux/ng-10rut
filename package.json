@@ -1,0 +1,64 @@
+{
+  "_from": "ng9-rut",
+  "_id": "ng9-rut@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-VuRVdcoXTHvXrv/lpcZOfolM/XRN93x95/E+z8hGe8kSuD93QhshIA9kuI65klp/jYO0za456VWvnl1K2BLD6Q==",
+  "_location": "/ng9-rut",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "ng9-rut",
+    "name": "ng9-rut",
+    "escapedName": "ng9-rut",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng9-rut/-/ng9-rut-0.1.0.tgz",
+  "_shasum": "303207c81f0b96b7641420906c70cee5841cc44a",
+  "_spec": "ng9-rut",
+  "_where": "C:\\Users\\toro_\\OneDrive\\Documentos\\Pruebas\\MEAN RIPLEY\\cliente",
+  "bundleDependencies": false,
+  "dependencies": {
+    "rut-helpers": "0.1.0"
+  },
+  "deprecated": false,
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ng9-rut",
+  "es2015": "fesm2015/ng9-rut",
+  "esm2015": "esm2015/ng9-rut",
+  "esm5": "esm5/ng9-rut",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ng9-rut",
+  "fesm2015": "fesm2015/ng9-rut",
+  "fesm5": "fesm5/ng9-rut",
+  "main": "bundles/ng9-rut.umd",
+  "metadata": "ng9-rut.metadata.json",
+  "module": "fesm5/ng9-rut",
+  "name": "ng9-rut",
+  "peerDependencies": {
+    "@angular/common": ">=9.1.0",
+    "@angular/core": ">=9.1.0",
+    "tslib": ">=1.10.0"
+  },
+  "sideEffects": false,
+  "typings": "ng9-rut.d.ts",
+  "version": "0.1.0",
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "11.0.9",
+    "esm2015": "11.0.9",
+    "esm5": "11.0.9",
+    "fesm2015": "11.0.9",
+    "fesm5": "11.0.9",
+    "main": "11.0.9",
+    "module": "11.0.9",
+    "typings": "11.0.9"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  }
+}

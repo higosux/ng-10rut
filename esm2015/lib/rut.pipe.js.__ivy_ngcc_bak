@@ -1,0 +1,15 @@
+import { __decorate } from "tslib";
+import { Pipe } from '@angular/core';
+import { rutFormat } from 'rut-helpers';
+let RutPipe = class RutPipe {
+    transform(value) {
+        return rutFormat(value);
+    }
+};
+RutPipe = __decorate([
+    Pipe({
+        name: 'rut',
+    })
+], RutPipe);
+export { RutPipe };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicnV0LnBpcGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZzktcnV0LyIsInNvdXJjZXMiOlsibGliL3J1dC5waXBlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsSUFBSSxFQUFpQixNQUFNLGVBQWUsQ0FBQztBQUNwRCxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sYUFBYSxDQUFDO0FBS3hDLElBQWEsT0FBTyxHQUFwQixNQUFhLE9BQU87SUFDWCxTQUFTLENBQUMsS0FBYTtRQUM1QixPQUFPLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUMxQixDQUFDO0NBQ0YsQ0FBQTtBQUpZLE9BQU87SUFIbkIsSUFBSSxDQUFDO1FBQ0osSUFBSSxFQUFFLEtBQUs7S0FDWixDQUFDO0dBQ1csT0FBTyxDQUluQjtTQUpZLE9BQU8iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBQaXBlLCBQaXBlVHJhbnNmb3JtIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBydXRGb3JtYXQgfSBmcm9tICdydXQtaGVscGVycyc7XG5cbkBQaXBlKHtcbiAgbmFtZTogJ3J1dCcsXG59KVxuZXhwb3J0IGNsYXNzIFJ1dFBpcGUgaW1wbGVtZW50cyBQaXBlVHJhbnNmb3JtIHtcbiAgcHVibGljIHRyYW5zZm9ybSh2YWx1ZTogc3RyaW5nKTogc3RyaW5nIHtcbiAgICByZXR1cm4gcnV0Rm9ybWF0KHZhbHVlKTtcbiAgfVxufVxuIl19
